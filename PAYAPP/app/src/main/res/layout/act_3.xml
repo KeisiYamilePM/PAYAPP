@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:layout_marginTop="18dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:text="BOMBO"
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            tools:textSize="24sp"
+            android:gravity="center"
+            android:layout_above="@+id/linearLayout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:background="@android:color/holo_blue_dark"
+            android:layout_weight="0.33" />
+
+        <TextView
+            android:text="Una pareja de 19 años cada uno, hicieron el amor 365 días y fueron 2 veces donde el ginecólogo y esto dió como resultado: Procedimiento >> 19.19365 X 2 Resultado le dan vuelta a la calculadora... "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4"
+            android:layout_alignBaseline="@+id/textView3"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignLeft="@+id/linearLayout"
+            android:layout_alignStart="@+id/linearLayout"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            tools:paddingBottom="@dimen/activity_vertical_margin" />
+
+        <TextView
+            android:id="@+id/opeA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Operando A:"
+            tools:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/id_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
+            android:layout_below="@id/opeA"/>
+
+        <TextView
+            android:id="@+id/opeB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_a"
+            android:text="Operando B:"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/id_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/editbox_background"
+            android:layout_below="@id/opeB"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/sumar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/id_b"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="1dip"
+                android:onClick="cSumar"
+                android:text="+"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/restar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/sumar"
+                android:layout_alignTop="@id/sumar"
+                android:onClick="cRestar"
+                android:text="-"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/multiplicar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/restar"
+                android:layout_alignTop="@id/restar"
+                android:onClick="cMultiplicar"
+                android:text="*"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/dividir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/multiplicar"
+                android:layout_alignTop="@id/sumar"
+                android:onClick="cDividir"
+                android:text="/"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_resultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dividir"
+            android:text="Resultado:"
+            tools:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/id_viewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_resultado"
+            android:text="Realice operación para obtener resultado"
+            tools:textSize="14sp" />
+    </LinearLayout>
+
+</RelativeLayout>
